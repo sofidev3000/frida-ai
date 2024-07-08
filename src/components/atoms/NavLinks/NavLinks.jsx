@@ -14,6 +14,7 @@ const HeaderMenu = () => {
 
   return (
     <nav className="header__menu">
+      <div className='header__menu-panel'>
       <ul className="header__list">
         {headerMainMenu.map((item, index) => (
           <li
@@ -37,6 +38,7 @@ const HeaderMenu = () => {
           </li>
         ))}
       </ul>
+      </div>
     </nav>
   );
 };

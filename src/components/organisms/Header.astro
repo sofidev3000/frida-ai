@@ -1,12 +1,46 @@
 ---
-import NavLinks from "../atoms/NavLinks/NavLinks"
+import NavLinks from "../atoms/NavLinks/NavLinks";
 ---
 
-<header>
-    <header class="header">
-        <div class="header__container">
-          <img class="header__logo" src="https://i.postimg.cc/RhxGxT03/2.png" alt="logo" />
-          <NavLinks client:load/>
-    </div>
-
+<header class="header">
+  <div class="header__container">
+    <img
+      class="header__logo"
+      src="https://i.postimg.cc/RhxGxT03/2.png"
+      alt="logo"
+    />
+    <NavLinks client:load />
+  </div>
 </header>
+
+<style>
+  .header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header__container {
+    width: 100%;
+    max-width: 90%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0 0 0 / 51%);
+    margin-top: 10rem;
+    padding: 0.5rem 1rem;
+    border-radius: 16px;
+    backdrop-filter: blur(30px);
+    position: fixed;
+  }
+
+  .header__logo {
+    flex-basis: 10%;
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+</style>

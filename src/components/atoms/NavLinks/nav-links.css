@@ -1,8 +1,22 @@
 /* styles.css */
-
 .header__menu {
-    position: relative;
+  flex-basis: auto;
+  position: relative;
+}
+.header__menu-panel{
+  position: relative;
+}
+.header__list {
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width:768px) {
+    flex-direction: column;
+    position: absolute;
   }
+}
+.header__item {
+  margin-right: 1.5rem;
+}
 
   .header__list {
     list-style: none;
