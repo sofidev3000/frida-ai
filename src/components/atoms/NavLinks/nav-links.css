@@ -44,6 +44,7 @@
     text-decoration: none;
   }
 
-  .dropdown li:hover {
+   li:hover  .dropdown{
+    display: block;
     background-color: #f1f1f1;
   }
