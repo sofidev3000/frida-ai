@@ -1,0 +1,24 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Header from "../components/organisms/Header.astro"
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header/>
+    <main>
+      <slot />
+    </main>
+    <!-- <Footer /> -->
+  </body>
+  <style>
+    h1 {
+      font-size: 2rem;
+    }
+  </style>
+</html>
