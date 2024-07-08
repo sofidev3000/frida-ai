@@ -16,23 +16,27 @@ import NavLinks from "../atoms/NavLinks/NavLinks";
 <style>
   .header {
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
   }
 
   .header__container {
     width: 100%;
-    max-width: 90%;
+    max-width: 80%;
     display: flex;
     align-self: center;
     justify-content: space-between;
     align-items: center;
     background: rgb(0 0 0 / 51%);
     margin-top: 10rem;
-    padding: 0.5rem 1rem;
+    padding: 0.1rem 1rem;
     border-radius: 16px;
     backdrop-filter: blur(30px);
     position: fixed;
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+    }
   }
 
   .header__logo {

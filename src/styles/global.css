@@ -2,13 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  html {
+}
+
+html {
     font-size: 62.5%;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-  }
-  body {
+}
+
+html {
     background-color: #06080c;
     color: white;
     display: flex;
@@ -18,18 +20,30 @@
     position: relative;
     z-index: 1;
     overflow-x: hidden;
-  }
+}
 
-  body:before {
+html:after,
+html:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+html:before {
     content: "";
     position: absolute;
     background-color: #090c12;
     background-image:
-      radial-gradient(37.88% 68.62% at 50% 0, rgba(26, 244, 208, 0.3) 0%, rgba(0, 124, 120, 0) 80%),
-      radial-gradient(10% 10% at 50% 10%, rgba(26, 237, 244, 0.5) 0%, rgba(0, 124, 120, 0.4) 90%, rgba(0, 124, 116, 0) 100%),
-      radial-gradient(100% 28.09% at 100% 10%, rgba(26, 244, 230, 0.2) 0%, rgba(0, 97, 124, 0.1) 80%, rgba(0, 124, 112, 0) 100%),
-      linear-gradient(180deg, rgba(0, 105, 124, 0.075) 35.79%, rgba(0, 124, 71, 0.05) 80%, #0d1017),
-      radial-gradient(74.84% 135.56% at 100% 10%, rgba(40, 197, 218, 0.5) 0%, #0d1017 80%);
+        radial-gradient(37.88% 68.62% at 50% 0, rgba(26, 244, 208, 0.3) 0%, rgba(0, 124, 120, 0) 80%),
+        radial-gradient(10% 10% at 50% 10%, rgba(26, 237, 244, 0.5) 0%, rgba(0, 124, 120, 0.4) 90%, rgba(0, 124, 116, 0) 100%),
+        radial-gradient(100% 28.09% at 100% 10%, rgba(26, 244, 230, 0.2) 0%, rgba(0, 97, 124, 0.1) 80%, rgba(0, 124, 112, 0) 100%),
+        linear-gradient(180deg, rgba(0, 105, 124, 0.075) 35.79%, rgba(0, 124, 71, 0.05) 80%, #0d1017),
+        radial-gradient(74.84% 135.56% at 100% 10%, rgba(40, 197, 218, 0.5) 0%, #0d1017 80%);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100svh;
@@ -40,16 +54,27 @@
     right: -50px;
     width: calc(100% + 100px);
     overflow-x: hidden;
-  }
+}
 
+@media (max-width: 768px) {
+    html:before {
+        background-size: 100%;
+        width: 100%;
+    }
+}
 
+html:after {
+    content: "";
+    background-color: #13161c;
+    z-index: -3;
+}
 
-
-  a {
+a {
     color: aqua;
     text-decoration: none;
     font-size: 1.6rem;
-  }
-  li {
+}
+
+li {
     list-style: none;
-  }
+}

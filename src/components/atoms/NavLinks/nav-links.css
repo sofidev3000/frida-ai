@@ -9,9 +9,19 @@
 .header__list {
   display: flex;
   justify-content: flex-end;
+  left: 50%;
+  transform: translateX(-50%);
   @media screen and (max-width:768px) {
     flex-direction: column;
     position: absolute;
+    list-style: none;
+    padding: 0 1rem;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    background: black;
+    padding: 1rem;
+    right: -144px;
   }
 }
 .header__item {
