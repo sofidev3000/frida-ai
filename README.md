@@ -1,0 +1,2 @@
+# frida-ai
+Propuesta
