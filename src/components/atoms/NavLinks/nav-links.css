@@ -1,74 +1,85 @@
 /* styles.css */
+
 .header__menu {
   flex-basis: auto;
-  position: relative;
-}
-.header__menu-panel{
-  position: relative;
-}
-.header__list {
-  display: flex;
-  justify-content: flex-end;
-  left: 50%;
-  transform: translateX(-50%);
-  @media screen and (max-width:768px) {
-    flex-direction: column;
-    position: absolute;
-    list-style: none;
-    padding: 0 1rem;
-    margin: 0;
-    display: flex;
-    width: 100vw;
-    background: black;
-    padding: 1rem;
-    right: -144px;
-  }
-}
-.header__item {
-  margin-right: 1.5rem;
-}
+
 
   .header__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-  }
+    justify-content: flex-end;
 
-  .header__item {
-    position: relative;
-    margin-right: 20px;
-  }
+    @media screen and (max-width: 728px) {
+      flex-direction: column;
+      position: absolute;
+      top: 0px;
+      transform: translateX(100%);
+      left: -13%;
+      background: rgba(0, 0, 0, 0.588);
+      backdrop-filter: blur(22px);
+      min-height: 100dvh;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 1rem 2rem;
+      width: 100vw;
+      z-index: 40;
+      transition: transform .4s linear;
+    }
 
-  .header__link {
-    text-decoration: none;
-    color: #00ffea;
+    .header__item {
+      margin-right: 1.5rem;
+    }
   }
+}
 
-  .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    min-width: 160px;
-    z-index: 1;
-  }
+.header__link {
+  text-decoration: none;
+  color: #00ffea;
+}
 
-  .dropdown li {
-    padding: 8px 16px;
-  }
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 62%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 160px;
+  max-width: 160px;
+  z-index: 1;
 
-  .dropdown li a {
-    color: #000;
-    text-decoration: none;
+  @media screen and (max-width:728px) {
+    top: 4%;
+    left: 97px;
   }
+}
 
-   li:hover  .dropdown{
-    display: block;
-    background-color: #f1f1f1;
+.dropdown__item {
+  padding: 8px 16px;
+  &:hover{
+    background: darkgray;
   }
+}
+
+.dropdown__item:hover > .dropdown__link{
+  color:aqua;
+}
+
+.dropdown__link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+li:hover .dropdown {
+  display: block;
+  background-color: #f1f1f1;
+}
+
+
+.header__list.is-active {
+  transform: translateX(0%);
+}

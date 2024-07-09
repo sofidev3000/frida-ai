@@ -35,7 +35,8 @@ import NavLinks from "../atoms/NavLinks/NavLinks";
     backdrop-filter: blur(30px);
     position: fixed;
     @media screen and (max-width:768px) {
-        flex-direction: column;
+      flex-direction: column;
+      margin-top: 5rem;
     }
   }
 
@@ -46,5 +47,8 @@ import NavLinks from "../atoms/NavLinks/NavLinks";
     object-fit: cover;
   }
 
+  .header__container:has(.header__list.is-active){
+    backdrop-filter: none;
+  }
 
 </style>

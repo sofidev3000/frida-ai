@@ -5,25 +5,26 @@
 }
 
 html {
+    margin: 0;
     font-size: 62.5%;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
 }
 
-html {
+body {
+    margin: 0;
     background-color: #06080c;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     position: relative;
     z-index: 1;
     overflow-x: hidden;
 }
 
-html:after,
-html:before {
+body:after,
+body:before {
     content: "";
     position: absolute;
     top: 0;
@@ -34,7 +35,7 @@ html:before {
     width: 100%;
 }
 
-html:before {
+body:before {
     content: "";
     position: absolute;
     background-color: #090c12;
@@ -57,20 +58,19 @@ html:before {
 }
 
 @media (max-width: 768px) {
-    html:before {
+    body:before {
         background-size: 100%;
         width: 100%;
     }
 }
 
-html:after {
+body:after {
     content: "";
     background-color: #13161c;
     z-index: -3;
 }
 
 a {
-    color: aqua;
     text-decoration: none;
     font-size: 1.6rem;
 }
