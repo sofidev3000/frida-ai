@@ -1,85 +1,59 @@
-* {
+:root {
+    --color-background-body: #06080c;
+    --color-background-before: #090c12;
+    --color-gradient1-start: rgba(26, 244, 208, 0.3);
+    --color-gradient1-end: rgba(0, 124, 120, 0);
+    --color-gradient2-start: rgba(26, 237, 244, 0.5);
+    --color-gradient2-middle: rgba(0, 124, 120, 0.4);
+    --color-gradient2-end: rgba(0, 124, 116, 0);
+    --color-gradient3-start: rgba(26, 244, 230, 0.2);
+    --color-gradient3-middle: rgba(0, 97, 124, 0.1);
+    --color-gradient3-end: rgba(0, 124, 112, 0);
+    --color-gradient4-start: rgba(0, 105, 124, 0.075);
+    --color-gradient4-end: rgba(0, 124, 71, 0.05);
+    --color-background-gradient5: #0d1017;
+    --color-gradient6-start: rgba(40, 197, 218, 0.5);
+    --color-background-gradient6: #0d1017;
+    --color-background-after: #13161c;
+    --color-text: white;
+
+    /* Nuevas variables */
+    --color-link: #00ffea;
+    --color-background-header-menu: rgba(0, 0, 0, 0.588);
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+    --color-dropdown-background: #f1f1f1; /* Nueva variable para el color de fondo del dropdown */
+
+    /* Nuevas variables para los colores del menú hamburguesa */
+  --color-hamburger-background: rgba(0, 0, 0, 0.588);
+  --color-hamburger-lines: aqua; /* Color de las líneas del hamburguesa */
+  }
+
+
+
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+  }
 
-html {
+  html {
     margin: 0;
     font-size: 62.5%;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-}
+  }
 
-body {
-    background-color: #06080c;
-    color: white;
+  body {
+    background-color: var(--color-background-body);
+    color: var(--color-text);
     overflow-x: hidden;
-}
-/* .background{
-    margin: 0;
-    background-color: #06080c;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    overflow-x: hidden;
-}
+  }
 
-.backgroud:after,
-.backgroud:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.backgroud:before {
-    content: "";
-    position: absolute;
-    background-color: #090c12;
-    background-image:
-        radial-gradient(37.88% 68.62% at 50% 0, rgba(26, 244, 208, 0.3) 0%, rgba(0, 124, 120, 0) 80%),
-        radial-gradient(10% 10% at 50% 10%, rgba(26, 237, 244, 0.5) 0%, rgba(0, 124, 120, 0.4) 90%, rgba(0, 124, 116, 0) 100%),
-        radial-gradient(100% 28.09% at 100% 10%, rgba(26, 244, 230, 0.2) 0%, rgba(0, 97, 124, 0.1) 80%, rgba(0, 124, 112, 0) 100%),
-        linear-gradient(180deg, rgba(0, 105, 124, 0.075) 35.79%, rgba(0, 124, 71, 0.05) 80%, #0d1017),
-        radial-gradient(74.84% 135.56% at 100% 10%, rgba(40, 197, 218, 0.5) 0%, #0d1017 80%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100svh;
-    z-index: -2;
-    filter: blur(50px);
-    top: -50px;
-    left: -50px;
-    right: -50px;
-    width: calc(100% + 100px);
-    overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-    .background:before {
-        background-size: 100%;
-        width: 85%;
-    }
-}
-
-.background:after {
-    content: "";
-    background-color: #13161c;
-    z-index: -3;
-} */
-
-a {
+  a {
     text-decoration: none;
     font-size: 1.6rem;
-}
+  }
 
-li {
+  li {
     list-style: none;
-}
+  }

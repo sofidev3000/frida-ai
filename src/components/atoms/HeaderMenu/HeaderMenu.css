@@ -1,55 +1,56 @@
-
 .header__menu {
   flex-basis: auto;
+}
 
-/*panel*/
-  .header__list {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      position: absolute;
-      top: -11px;
-      transform: translateX(100%);
-      left: 0;
-      background: rgba(0, 0, 0, 0.588);
-      backdrop-filter: blur(22px);
-      min-height: 100dvh;
-      padding: 1rem 2rem;
-      width: 100vw;
-      z-index: 40;
-      transition: transform .4s ease-in-out;
-    }
+.header__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
-    .header__item {
-      margin-right: 1.5rem;
-    }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: -11px;
+    transform: translateX(100%);
+    left: 0;
+    background: var(--color-background-header-menu);
+    backdrop-filter: blur(22px);
+    min-height: 100dvh;
+    padding: 1rem 2rem;
+    width: 100vw;
+    z-index: 40;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .header__item {
+    margin-right: 1.5rem;
   }
 }
 
 .header__link {
   text-decoration: none;
-  color: #00ffea;
-  @media screen and (max-width:768px){
-      font-size: 2rem;
-    }
-  }
-  @media screen and (max-width:768px) {
-    .header__list  > *:not(:last-child){
-      margin-bottom: 3rem;
-    }
+  color: var(--color-link);
 
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
   }
-  .dropdown {
+}
+
+@media screen and (max-width: 768px) {
+  .header__list > *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.dropdown {
   display: none;
   position: absolute;
-  top: 63%;
+  top: 100%;
   right: 0;
-  background-color: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-dropdown-background); /* Utilizando la variable para el color de fondo del dropdown */
+  box-shadow: 0 8px 16px var(--box-shadow-color);
   list-style: none;
   padding: 0;
   margin: 0;
@@ -57,8 +58,8 @@
   max-width: 160px;
   z-index: 1;
 
-  @media screen and (max-width:768px) {
-    top: 52%;
+  @media screen and (max-width: 768px) {
+    top: auto;
     left: 0;
   }
 }
@@ -66,27 +67,24 @@
 .dropdown__item {
   padding: 8px 16px;
   background-color: black;
-  &:hover{
+  &:hover {
     background: darkgray;
   }
 }
 
-.dropdown__item:hover  .dropdow__link{
-  color:black;
+.dropdown__item:hover .dropdow__link {
+  color: black;
 }
 
 .dropdow__link {
-
   text-decoration: none;
   font-weight: 700;
 }
 
-
 li:hover .dropdown {
   display: block;
-  background-color: #f1f1f1;
+  background-color: var(--color-dropdown-background); /* Utilizando la variable para el color de fondo del dropdown */
 }
-
 
 .header__list.is-active {
   transform: translateX(0%);
