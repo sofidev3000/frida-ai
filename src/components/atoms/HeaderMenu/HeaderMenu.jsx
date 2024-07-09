@@ -1,7 +1,14 @@
-import React, { useState } from "react";
-import { headerMainMenu } from "../../../data/navMenu";
-import "./nav-links.css";
+import { useState, useEffect } from "react";
+import { headerMainMenu } from "@src/data/navMenu";
+import { HamburgerButton } from "@controllers/hamburger.js";
+
+import "./HeaderMenu.css";
+
 const HeaderMenu = () => {
+  useEffect(() => {
+    HamburgerButton(".hamburger",".header__list", ".header__link--regular", ".dropdown__item");
+  }, []);
+
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleMouseEnter = () => {
@@ -22,9 +29,15 @@ const HeaderMenu = () => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <a className="header__link" href={item.href || "#"}>
+            {item.dropdown ?
+            <a className="header__link header__link--dropdown" href={item.href || "#"}>
               {item.text}
             </a>
+            :
+            <a className="header__link  header__link--regular" href={item.href || "#"}>
+            {item.text}
+          </a>
+          }
             {item.dropdown && showDropdown && (
               <ul className="dropdown">
                 {item.submenu.map((subItem, subIndex) => (
@@ -42,5 +55,3 @@ const HeaderMenu = () => {
 };
 
 export default HeaderMenu;
-
-// CSS styles should remain the same as provided in your original CSS block

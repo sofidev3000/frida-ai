@@ -3,10 +3,11 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "baseUrl": "../",
+    "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@src/*": ["src/*"]
+      "@src/*": ["src/*"],
+      "@controllers/*": ["src/controllers/*"]
     }
   }
 }

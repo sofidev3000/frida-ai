@@ -12,6 +12,11 @@ html {
 }
 
 body {
+    background-color: #06080c;
+    color: white;
+    overflow-x: hidden;
+}
+/* .background{
     margin: 0;
     background-color: #06080c;
     color: white;
@@ -23,8 +28,8 @@ body {
     overflow-x: hidden;
 }
 
-body:after,
-body:before {
+.backgroud:after,
+.backgroud:before {
     content: "";
     position: absolute;
     top: 0;
@@ -35,7 +40,7 @@ body:before {
     width: 100%;
 }
 
-body:before {
+.backgroud:before {
     content: "";
     position: absolute;
     background-color: #090c12;
@@ -58,17 +63,17 @@ body:before {
 }
 
 @media (max-width: 768px) {
-    body:before {
+    .background:before {
         background-size: 100%;
-        width: 100%;
+        width: 85%;
     }
 }
 
-body:after {
+.background:after {
     content: "";
     background-color: #13161c;
     z-index: -3;
-}
+} */
 
 a {
     text-decoration: none;

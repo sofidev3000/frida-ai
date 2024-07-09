@@ -1,5 +1,6 @@
 ---
-import NavLinks from "../atoms/NavLinks/NavLinks";
+import HamburgerButton  from "../atoms/HamburgerButton/HamburgerButton";
+import HeaderMenu from "@components/atoms/HeaderMenu/HeaderMenu";
 ---
 
 <header class="header">
@@ -9,46 +10,51 @@ import NavLinks from "../atoms/NavLinks/NavLinks";
       src="https://i.postimg.cc/RhxGxT03/2.png"
       alt="logo"
     />
-    <NavLinks client:load />
+    <HeaderMenu client:only="react"/>
+    <HamburgerButton />
   </div>
 </header>
 
 <style>
-  .header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-  }
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
+.header__container {
+  width: 100%;
+  max-width: 80%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0 0 0 / 51%);
+  margin-top: 10rem;
+  padding: 0.1rem 1rem;
+  border-radius: 16px;
+  backdrop-filter: blur(30px);
+  position: fixed;
+}
+
+@media screen and (max-width: 768px) {
   .header__container {
-    width: 100%;
-    max-width: 80%;
-    display: flex;
+    margin-top: 5rem;
+    max-width:32rem;
     align-self: center;
-    justify-content: space-between;
-    align-items: center;
-    background: rgb(0 0 0 / 51%);
-    margin-top: 10rem;
-    padding: 0.1rem 1rem;
-    border-radius: 16px;
-    backdrop-filter: blur(30px);
-    position: fixed;
-    @media screen and (max-width:768px) {
-      flex-direction: column;
-      margin-top: 5rem;
-    }
   }
+}
 
-  .header__logo {
-    flex-basis: 10%;
-    width: 100px;
-    height: 100%;
-    object-fit: cover;
-  }
+.header__logo {
+  flex-basis: 10%;
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .header__container:has(.header__list.is-active){
-    backdrop-filter: none;
-  }
+.header__container:has(.header__list.is-active) {
+  backdrop-filter: none;
+}
+
 
 </style>
