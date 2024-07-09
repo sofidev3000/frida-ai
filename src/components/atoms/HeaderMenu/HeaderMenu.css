@@ -6,11 +6,13 @@
   .header__list {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     @media screen and (max-width: 768px) {
       flex-direction: column;
       justify-content: center;
+      align-items: flex-start;
       position: absolute;
-      top: 0px;
+      top: -11px;
       transform: translateX(100%);
       left: 0;
       background: rgba(0, 0, 0, 0.588);
@@ -31,9 +33,17 @@
 .header__link {
   text-decoration: none;
   color: #00ffea;
-}
+  @media screen and (max-width:768px){
+      font-size: 2rem;
+    }
+  }
+  @media screen and (max-width:768px) {
+    .header__list  > *:not(:last-child){
+      margin-bottom: 3rem;
+    }
 
-.dropdown {
+  }
+  .dropdown {
   display: none;
   position: absolute;
   top: 63%;
@@ -55,17 +65,18 @@
 
 .dropdown__item {
   padding: 8px 16px;
+  background-color: black;
   &:hover{
     background: darkgray;
   }
 }
 
-.dropdown__item:hover > .dropdown__link{
-  color:aqua;
+.dropdown__item:hover  .dropdow__link{
+  color:black;
 }
 
-.dropdown__link {
-  color: #000;
+.dropdow__link {
+
   text-decoration: none;
   font-weight: 700;
 }

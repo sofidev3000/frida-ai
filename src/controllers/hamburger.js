@@ -12,5 +12,5 @@ export function HamburgerButton(hamburgerBtn, panel, menuLink, dropDownLink) {
 }
 
 d.addEventListener("DOMContentLoaded", (e) => {
-  HamburgerButton(".hamburger", ".header__list", ".regular-link", ".dropdown__item");
+  HamburgerButton(".hamburger", ".header__list", ".regular-link", ".dropdow__link");
 });

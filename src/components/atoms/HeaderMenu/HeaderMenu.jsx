@@ -6,7 +6,7 @@ import "./HeaderMenu.css";
 
 const HeaderMenu = () => {
   useEffect(() => {
-    HamburgerButton(".hamburger",".header__list", ".header__link--regular", ".dropdown__item");
+    HamburgerButton(".hamburger",".header__list", ".header__link--regular", ".dropdow__link");
   }, []);
 
   const [showDropdown, setShowDropdown] = useState(false);
@@ -42,7 +42,7 @@ const HeaderMenu = () => {
               <ul className="dropdown">
                 {item.submenu.map((subItem, subIndex) => (
                   <li className="dropdown__item" key={subIndex}>
-                    <a className="dropdow__link" href={subItem.link}>{subItem.text}</a>
+                    <a className="header__link dropdow__link" href={subItem.link}>{subItem.text}</a>
                   </li>
                 ))}
               </ul>
