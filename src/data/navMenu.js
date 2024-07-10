@@ -1,5 +1,5 @@
 const headerMainMenu = [
-    {text:"caracteristicas", href:"/" },
+    {text:"caracteristicas", href:"#" },
     { text: "Earnings", link: "#" },
     {
         text: "Dropdown",
