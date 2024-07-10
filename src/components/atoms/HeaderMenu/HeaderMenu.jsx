@@ -1,13 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { headerMainMenu } from "@src/data/navMenu";
-import { HamburgerButton } from "@controllers/hamburger.js";
-
 import "./HeaderMenu.css";
+import HamburgerBtn from "../HamburgerButton/HamburgerButton";
+
 
 const HeaderMenu = () => {
-  useEffect(() => {
-    HamburgerButton(".hamburger",".header__list", ".header__link--regular", ".dropdow__link");
-  }, []);
+  // panel debe desplegarse al hacer click en el botonHamburgerMenu
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleActive = () => {
+    setIsActive(prevState => !prevState);
+  };
 
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -20,8 +23,8 @@ const HeaderMenu = () => {
   };
 
   return (
-    <nav className="header__menu">
-      <ul className="header__list">
+    <><nav className="header__menu">
+      <ul className={`header__list ${isActive ? 'is-active' : ''}`}>
         {headerMainMenu.map((item, index) => (
           <li
             key={index}
@@ -30,14 +33,13 @@ const HeaderMenu = () => {
             onMouseLeave={handleMouseLeave}
           >
             {item.dropdown ?
-            <a className="header__link header__link--dropdown" href={item.href || "#"}>
-              {item.text}
-            </a>
-            :
-            <a className="header__link  header__link--regular" href={item.href || "#"}>
-            {item.text}
-          </a>
-          }
+              <a className="header__link header__link--dropdown" href={item.href || "#"}>
+                {item.text}
+              </a>
+              :
+              <a className="header__link  header__link--regular" href={item.href || "#"}>
+                {item.text}
+              </a>}
             {item.dropdown && showDropdown && (
               <ul className="dropdown">
                 {item.submenu.map((subItem, subIndex) => (
@@ -51,6 +53,9 @@ const HeaderMenu = () => {
         ))}
       </ul>
     </nav>
+    <HamburgerBtn classActive={isActive ? 'is-active' : ''} onClick={toggleActive}/>
+    </>
+
   );
 };
 

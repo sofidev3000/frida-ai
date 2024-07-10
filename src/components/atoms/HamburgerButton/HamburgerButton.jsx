@@ -1,15 +1,18 @@
-import "./hamburger-button.css"
+import React, { useState } from 'react';
+import './hamburger-button.css'; // Adjust this path as per your actual file structure
 
-const HamburgerButton = () => {
+const HamburgerBtn = ({classActive, onClick}) => {
   return (
-    <>
-      <button class="hamburger hamburger--collapse " type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </>
+    <button
+      onClick={onClick}
+      className={`hamburger hamburger--collapse ${classActive}`}
+      type="button"
+    >
+      <span className="hamburger-box">
+        <span className="hamburger-inner"></span>
+      </span>
+    </button>
   );
 };
 
-export default HamburgerButton;
+export default HamburgerBtn;
