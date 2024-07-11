@@ -14,12 +14,12 @@
     position: absolute;
     top: -11px;
     transform: translateX(100%);
-    left: 0;
+    left: -30px;
     background: var(--color-background-header-menu);
     backdrop-filter: blur(22px);
     min-height: 100dvh;
-    padding: 1rem 2rem;
-    width: 100vw;
+    padding: 1rem 4rem;
+    width: 140vw;
     z-index: 40;
     transition: transform 0.4s ease-in-out;
   }

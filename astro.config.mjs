@@ -4,6 +4,6 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https:/Frida-ai.com',
+  site: 'https://frida-ai.vercel.app/',
   integrations: [react()]
 });
