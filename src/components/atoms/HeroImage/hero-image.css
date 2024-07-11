@@ -7,6 +7,7 @@
     background-color: rgba(168, 168, 168, 0.171);
     backdrop-filter: blur(20px);
     align-self: center;
+    min-width: 27rem;
     .hero__img{
         border-radius: 17px;
         width: 100%;
