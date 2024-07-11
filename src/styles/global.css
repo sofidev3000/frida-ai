@@ -57,3 +57,15 @@
   li {
     list-style: none;
   }
+
+.text-gradient{
+  background: radial-gradient(
+    circle,
+    rgb(40, 158, 255) 0%,
+    rgb(204, 0, 255) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
