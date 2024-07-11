@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header__container {
+    z-index: 50;
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0 0 0 / 51%);
+    margin-top: 10rem;
+    padding: 0.1rem 1rem;
+    border-radius: 16px;
+    backdrop-filter: blur(30px);
+    position: fixed;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header__container {
+      margin-top: 8rem;
+      min-width:32rem;
+      align-self: center;
+    }
+  }
+
+  .header__logo {
+    flex-basis: 10%;
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .header__container:has(.header__list.is-active) {
+    backdrop-filter: none;
+  }

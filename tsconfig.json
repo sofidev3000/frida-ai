@@ -5,9 +5,14 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
       "@src/*": ["src/*"],
-      "@controllers/*": ["src/controllers/*"]
+      "@components/*": ["src/components/*"],
+      "@atoms/*": ["src/components/atoms/*"],
+      "@organisms/*": ["src/components/organisms/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@data/*": ["src/data/*"],
     }
   }
 }
