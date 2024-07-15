@@ -1,4 +1,4 @@
-
+import "./single-button.css"
 
 const SingleButton = ({buttonclass, text}) => {
   return (

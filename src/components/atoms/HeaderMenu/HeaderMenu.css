@@ -60,7 +60,9 @@
 
   @media screen and (max-width: 768px) {
     top: auto;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
   }
 }
 .dropdown__item {
@@ -68,6 +70,9 @@
   background-color: black;
   &:hover {
     background: darkgray;
+  }
+  @media screen and (max-width:768px) {
+    width: 100%;
   }
 }
 
