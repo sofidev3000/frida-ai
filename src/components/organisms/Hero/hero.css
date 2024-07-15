@@ -4,7 +4,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
-
+    min-height: 100dvh;
     &::-webkit-scrollbar {
         display: none;
     }
@@ -15,12 +15,12 @@
     width: 100%;
     justify-content: center;
     height: 100dvh;
-    padding: 0 7rem;
-    padding-top: 10rem;
-    padding: 10rem  7rem 0;
-  @media screen and (max-width:768px) {
-        padding-left: .1rem;
-        padding-right: .1rem;
+    padding: 18rem 0  0;
+    max-width: 1478px;
+    align-self: center;
+
+    @media screen and (max-width:768px) {
+        padding: 10rem .1rem 0;
     }
 
     .hero__container {
@@ -28,10 +28,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         text-align: center;
         padding: 0 2em;
-        min-height: 200dvh;
+        min-height: 125dvh;
+
         @media screen and (max-width:768px) {
             min-height: 100dvh;
         }
@@ -76,8 +77,8 @@
     .bg__middle {
         width: 100%;
         height: 100%;
-        transform: translateZ(5px) scale(0.375);
-        transform-origin: 50%;
+        transform: translateZ(5px) scale(0.325);
+        transform-origin: 30%;
         position: absolute;
     }
 
@@ -85,9 +86,8 @@
         display: block;
         position: absolute;
         overflow: none;
-        transform: rotate(-20deg);
-        width: 30rem;
-        height: 30rem;
+        width: 38rem;
+        height: 38rem;
         background: rgba(196, 196, 196, 0.236);
         backdrop-filter: blur(10px);
         padding: 1rem;
@@ -108,13 +108,45 @@
 
 
     .card__container:first-child {
-        left: -2%;
-        top: 79px;
+        transform: rotate(333deg);
+        left: 33%;
+        top: -11%;
 
         .card__parallax {
             background: center / cover no-repeat url("../img/ia-img/chango.webp");
         }
     }
+
+    .card__container:nth-child(2) {
+        transform: rotate(16deg);
+        left: 29%;
+        top: 90%;
+
+        .card__parallax {
+            background: center / cover no-repeat url("../img/ia-img/avatar2.webp");
+        }
+    }
+
+    .card__container:nth-child(3) {
+        transform: rotate(22deg);
+        left: 125%;
+        top: 90%;
+
+        .card__parallax {
+            background: center / cover no-repeat url("https://leonardo-cdn.b-cdn.net/wp-content/uploads/2023/07/Default_a_photo_of_a_burger_0.jpg");
+        }
+    }
+
+    .card__container:nth-child(4) {
+        transform: rotate(14deg);
+        left: 127%;
+        top: -4%;
+
+        .card__parallax {
+            background: center / cover no-repeat url("https://leonardo-cdn.b-cdn.net/wp-content/uploads/2023/07/Default_hyper_realistic_ultra_detailed_photograph_of_a_woman_s_1_6d8066d4-4036-4de0-a215-98461459e598_1.jpeg");
+        }
+    }
+
 
 
 }

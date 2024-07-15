@@ -12,5 +12,4 @@ const headerMainMenu = [
       },
 ]
 
-
 export  {headerMainMenu};
