@@ -43,7 +43,7 @@
             max-width: 66%;
             z-index: 10;
             transform-origin: top;
-            transform: translateZ(5px) scale(.900);
+
 
             .hero__title {
                 font-size: 5.4rem;
@@ -77,7 +77,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 2rem;
-                margin: 3rem 2rem 0 2rem;
+                margin: 3rem ;
                 min-height: 7dvh;
             }
 
