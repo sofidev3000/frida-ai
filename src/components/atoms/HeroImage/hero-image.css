@@ -8,7 +8,7 @@
     align-self: center;
     min-width: 27rem;
     filter: drop-shadow(0 0 0.75rem black);
-    min-height: auto;
+    min-height: 90rem;
     transform: translateZ(5px) scale(0.75);
     transform-origin: top;
     z-index: 10;
@@ -18,7 +18,7 @@
     .hero__img {
         border-radius: 30px;
         width: 97rem;
-        height: auto;
+        height: 100%;
         object-fit: cover;
     }
 }

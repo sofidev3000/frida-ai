@@ -15,7 +15,7 @@
     width: 100%;
     justify-content: center;
     height: 100dvh;
-    padding: 18rem 0  0;
+    padding: 16rem 0  0;
     max-width: 1478px;
     align-self: center;
 
@@ -120,7 +120,7 @@
     .card__container:nth-child(2) {
         transform: rotate(16deg);
         left: 29%;
-        top: 90%;
+        top: 128%;
 
         .card__parallax {
             background: center / cover no-repeat url("../img/ia-img/avatar2.webp");
@@ -130,7 +130,7 @@
     .card__container:nth-child(3) {
         transform: rotate(22deg);
         left: 125%;
-        top: 90%;
+        top: 128%;
 
         .card__parallax {
             background: center / cover no-repeat url("https://leonardo-cdn.b-cdn.net/wp-content/uploads/2023/07/Default_a_photo_of_a_burger_0.jpg");
