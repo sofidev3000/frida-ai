@@ -6,7 +6,7 @@
     position: relative;
     min-height: 100dvh;
     &::-webkit-scrollbar {
-        display: none!important;
+        display: none;
     }
 }
 
@@ -15,10 +15,12 @@
     width: 100%;
     justify-content: center;
     height: 100dvh;
-    padding: 13rem 0 0;
+    padding: 23rem 0 0;
     max-width: 1478px;
     align-self: center;
-
+    @media screen and (max-width:1366px) {
+        padding: 13rem 0 0;
+    }
     @media screen and (max-width:768px) {
         padding: 10rem .1rem 0;
     }
@@ -50,6 +52,12 @@
 
             .hero__text {
                 font-size: 2.4rem;
+
+            }
+            @media screen and (max-width:1366px) {
+                .hero__text{
+                    margin-bottom: 8rem;
+                }
             }
 
             @media screen and (max-width:768px) {
@@ -132,7 +140,7 @@
     .card__container:nth-child(3) {
         transform: rotate(22deg);
         left: 125%;
-        top: 158%;
+        top: 110%;
 
         .card__parallax {
             background: center / cover no-repeat url("https://leonardo-cdn.b-cdn.net/wp-content/uploads/2023/07/Default_a_photo_of_a_burger_0.jpg");
