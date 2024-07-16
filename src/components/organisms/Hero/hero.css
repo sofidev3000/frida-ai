@@ -5,9 +5,8 @@
     overflow-y: scroll;
     position: relative;
     min-height: 100dvh;
-
-    .parallax-container::-webkit-scrollbar {
-        display: none;
+    &::-webkit-scrollbar {
+        display: none!important;
     }
 }
 
