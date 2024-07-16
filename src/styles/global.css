@@ -25,13 +25,14 @@
   /* Nueva variable para el color de fondo del dropdown */
 
 
+  /* Color de las líneas del hamburguesa */
   --color-hamburger-background: rgba(0, 0, 0, 0.588);
   --color-hamburger-lines: aqua;
-  /* Color de las líneas del hamburguesa */
 
+  /* base */
+  --accent-color: #106bd2;
+  --black-color: rgb(11, 11, 11);
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -75,4 +76,24 @@ li {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--black-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
