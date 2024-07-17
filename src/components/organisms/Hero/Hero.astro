@@ -3,10 +3,12 @@ import SingleButton from "@atoms/SingleButton/SingleButton";
 import HeroImage from "@atoms/HeroImage/HeroImage.astro";
 import "./hero.css";
 import AnimatedButton from "@src/components/atoms/AnimatedButton/AnimatedButton.astro";
+import Features from "../Features/Features.astro";
+import CardsParallax from "@src/components/atoms/CardsParallax/CardsParallax.astro";
 ---
 
-<section class="hero parallax-container">
-  <div class="hero__container">
+
+  <section class="hero__container">
     <div class="hero__content">
       <h1 class="hero__title text-gradient">Convierte tus sueños en imágenes</h1>
       <p class="hero__text">
@@ -20,21 +22,6 @@ import AnimatedButton from "@src/components/atoms/AnimatedButton/AnimatedButton.
       </div>
     </div>
     <HeroImage />
-  </div>
-  <div class="image  bg__middle">
-    <div class="card__container">
-      <div class="card__parallax "></div>
-    </div>
-    <div class="card__container">
-      <div class="card__parallax "></div>
-    </div>
-    <div class="card__container">
-      <div class="card__parallax "></div>
-    </div>
-    <div class="card__container">
-      <div class="card__parallax "></div>
-    </div>
-
-
-  </div>
-</section>
+  </section>
+  <CardsParallax/>
+  <Features/>

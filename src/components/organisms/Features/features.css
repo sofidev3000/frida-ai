@@ -1,0 +1,9 @@
+.features{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    h2{
+        font-size: 3rem;
+        color:red;
+    }
+}
