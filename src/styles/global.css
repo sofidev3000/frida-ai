@@ -32,7 +32,15 @@
   /* base */
   --accent-color: #106bd2;
   --black-color: rgb(11, 11, 11);
+
+/* Radial gradient */
+--radial-gradient:radial-gradient(circle,
+rgb(40, 158, 255) 0%,
+rgb(204, 0, 255) 90%);
+
 }
+
+
 
 * {
   box-sizing: border-box;
@@ -54,6 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: hidden;
 }
 img{
   max-width: 100%;
@@ -69,9 +78,7 @@ li {
 }
 
 .text-gradient {
-  background: radial-gradient(circle,
-      rgb(40, 158, 255) 0%,
-      rgb(204, 0, 255) 100%);
+  background: var(--radial-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,21 +86,28 @@ li {
 }
 
 /* width */
-body::-webkit-scrollbar {
-  width: 10px;
+::-webkit-scrollbar {
+  width: 12px;
+  height: 30px;
 }
 
 /* Track */
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: var(--black-color);
 }
 
 /* Handle */
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: var(--accent-color);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media screen and (max-width:768px) {
+  ::-webkit-scrollbar {
+   display: none;
+  }
 }
