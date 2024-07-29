@@ -32,7 +32,15 @@
   /* base */
   --accent-color: #106bd2;
   --black-color: rgb(11, 11, 11);
+
+/* Radial gradient */
+--radial-gradient:radial-gradient(circle,
+rgb(40, 158, 255) 0%,
+rgb(204, 0, 255) 90%);
+
 }
+
+
 
 * {
   box-sizing: border-box;
@@ -70,9 +78,7 @@ li {
 }
 
 .text-gradient {
-  background: radial-gradient(circle,
-      rgb(40, 158, 255) 0%,
-      rgb(204, 0, 255) 100%);
+  background: var(--radial-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -3,25 +3,20 @@ import SingleButton from "@atoms/SingleButton/SingleButton";
 import HeroImage from "@atoms/HeroImage/HeroImage.astro";
 import "./hero.css";
 import AnimatedButton from "@src/components/atoms/AnimatedButton/AnimatedButton.astro";
-import Features from "../Features/Features.astro";
-import CardsParallax from "@src/components/atoms/CardsParallax/CardsParallax.astro";
 ---
 
-
-  <section class="hero__container">
-    <div class="hero__content">
-      <h1 class="hero__title text-gradient">Convierte tus sueños en imágenes</h1>
-      <p class="hero__text">
-        Con el Generador de Arte Frida AI. Da vida a tus ideas y crea obras
-        visuales asombrosas.
-      </p>
-      <!-- buttons -->
-      <div class="hero__buttons">
-        <SingleButton buttonclass="btn-base" text="Contacto" />
-        <AnimatedButton />
-      </div>
+<section class="hero">
+  <div class="hero__content">
+    <h1 class="hero__title text-gradient">Convierte tus sueños en imágenes</h1>
+    <p class="hero__text">
+      Con el Generador de Arte Frida AI. Da vida a tus ideas y crea obras
+      visuales asombrosas.
+    </p>
+    <!-- buttons -->
+    <div class="hero__buttons">
+      <SingleButton buttonclass="btn-base" text="Contacto" />
+      <AnimatedButton />
     </div>
-    <HeroImage />
-  </section>
-  <CardsParallax/>
-  <Features/>
+  </div>
+  <HeroImage />
+</section>

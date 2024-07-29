@@ -13,14 +13,16 @@ import Header from "@organisms/Header/Header.astro";
   <body>
     <Header />
     <div class="backgroud">
-      <main class="hero parallax-container">
+      <main class="parallax-container">
         <slot />
       </main>
     </div>
-    <!-- <Footer /> -->
-    <style is:global>
 
-      .parallax-container {
+    <!-- <Footer /> -->
+  </body>
+</html>
+<style is:global>
+  .parallax-container {
     width: 100%;
     perspective: 9px;
     overflow-x: hidden;
@@ -28,19 +30,14 @@ import Header from "@organisms/Header/Header.astro";
     position: relative;
     flex-direction: column;
     display: flex;
-    width: 100%;
     justify-content: center;
-
-    padding: 23rem 0 0;
+    padding: 32rem 0 0;
     align-self: center;
-    @media screen and (max-width:1366px) {
-        padding: 13rem 0 0;
+    @media screen and (max-width: 1366px) {
+      padding: 13rem 0 0;
     }
-
-    @media screen and (max-width:768px) {
-        padding: 10rem .1rem 0;
+    @media screen and (max-width: 768px) {
+      padding: 10rem 0.1rem 0;
     }
-}
-    </style>
-  </body>
-</html>
+  }
+</style>
