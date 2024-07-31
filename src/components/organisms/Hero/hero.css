@@ -90,8 +90,8 @@
 
 .card__container:first-child {
     transform: rotate(333deg);
-    left: 43%;
-    top: 13%;
+    left: 42%;
+    top: 10%;
 
     .card__parallax {
         background: center / cover no-repeat url("../img/ia-img/chango.webp");
@@ -101,7 +101,7 @@
 .card__container:nth-child(2) {
     transform: rotate(16deg);
     left: 40%;
-    top: 47%;
+    top: 30%;
 
     .card__parallax {
         background: center / cover no-repeat url("../img/ia-img/avatar2.webp");
@@ -111,7 +111,7 @@
 .card__container:nth-child(3) {
     transform: rotate(22deg);
     left: 103%;
-    top: 48%;
+    top: 31%;
 
     .card__parallax {
         background: center / cover no-repeat url("https://leonardo-cdn.b-cdn.net/wp-content/uploads/2023/07/Default_a_photo_of_a_burger_0.jpg");
@@ -120,8 +120,8 @@
 
 .card__container:nth-child(4) {
     transform: rotate(14deg);
-    left: 107%;
-    top: 17%;
+    left: 100%;
+    top: 12%;
 
     .card__parallax {
         background: center / cover no-repeat url("https://leonardo-cdn.b-cdn.net/wp-content/uploads/2023/07/Default_hyper_realistic_ultra_detailed_photograph_of_a_woman_s_1_6d8066d4-4036-4de0-a215-98461459e598_1.jpeg");

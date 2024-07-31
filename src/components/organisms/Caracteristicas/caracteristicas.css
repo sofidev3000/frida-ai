@@ -1,6 +1,63 @@
-.caracteristicas{
+.caracteristics{
     display: flex;
     flex-direction: column;
+    align-items: center;;
     min-height: 100dvh;
-
+    .caracteristics__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
+
+.caracteristics-image__container:not(.cat__img){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../img/ia-img/stars.jpg") no-repeat center center / cover;
+    border-radius: 50%;
+	mask-image: radial-gradient(ellipse, #2c80a3d7 53%, #447f9100 68%);
+	border-radius: 50%;
+    mix-blend-mode: screen;
+    width: 50rem;
+    height: 50rem;
+}
+
+.cat__img{
+    align-self: center;
+    width: 35rem;
+}
+
+.img__anim{
+    -webkit-animation: kenburns-top 5s ease-out both;
+    animation: kenburns-top 5s ease-out both;
+}
+
+@-webkit-keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
+  @keyframes kenburns-top {
+    0% {
+      -webkit-transform: scale(1) translateY(0);
+              transform: scale(1) translateY(0);
+      -webkit-transform-origin: 50% 16%;
+              transform-origin: 50% 16%;
+    }
+    100% {
+      -webkit-transform: scale(1.25) translateY(-15px);
+              transform: scale(1.25) translateY(-15px);
+      -webkit-transform-origin: top;
+              transform-origin: top;
+    }
+  }
